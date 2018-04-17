@@ -1,0 +1,38 @@
+$header
+
+#set( $H = '#' )
+$H Программа
+#macro( verbosedate $num )
+#if ($num == 1)первый#elseif ($num == 2)второй#end
+#end
+
+#set($oldday = -1)
+#foreach ($entry in $dayToTalk.entrySet())
+#set( $day = $entry.key )
+#set( $talks = $entry.value )
+#if($oldday != $day)
+$H День #verbosedate($day) #set($oldday = $day)
+
+#end
+
+#foreach( $talk in $talks )
+$H$H [$talk.name]($talk.url)
+
+
+#foreach( $d in $talk.description )$d #end
+
+
+#foreach( $s in $talk.speakers )
+<img src="$s.imageUrl" width=200 align=left> **$s.speaker**/$s.company
+
+#if($!s.bio.size() != 0)#foreach( $b in $s.bio)$b#end#end
+<br clear=all>
+
+
+#end
+<hr/>
+
+#end
+
+#end
+$footer

@@ -1,0 +1,471 @@
+[ {
+  "id" : "3IcnZK5Puwg8OMamm8IC2E",
+  "name" : "12-factor apps in .NET Core",
+  "speakers" : [ {
+    "speaker" : "Ian Cooper",
+    "company" : "Huddle",
+    "bio" : [ "Polyglot Coding Architect in London, founder of #ldnug, speaker, tabletop gamer, geek. Tattooed, pierced, and bearded. The \"guv\" on @BrighterCommand. Ian is an \"old man\" of the business now, with over 20 years of experience. He talks a lot about patterns and practices, with a strong focus on architecture. He's known for \"telling it how it is\" — taking today's topics and sharing with you war stories and experience to help you assess them." ],
+    "imageUrl" : "//images.ctfassets.net/9n3x4rtjlya6/50Bd93sYEEGik8CUGkqikW/019dad9c70683b760398d68b83568b06/ian_cooper_2.jpg"
+  } ],
+  "url" : "https://dotnext-piter.ru/2018/spb/talks/3icnzk5puwg8omamm8ic2e",
+  "description" : [ "The buzz is all around Cloud Native: continuous deployment and easy scaling of your server side code. You have heard about Docker and Microservices, but what are 12-factor apps? The Twelve-Factor App methodology was created by engineers with experience of delivering apps on Heroku, and is a \"recipe for success\" when authoring code for cloud native scenarios. \n\nIn this talk we will look at what a Twelve-Factor App is, and demonstrate how to meet the requirements when creating .NET applications. We will show examples using ASP.NET Core, Brighter and Darker of authoring code to meet these requirements, and show its deployment to containers as well as Azure Service Fabric and Serverless environments. \n\nBy the end of this talk you will know enough to be able to approach another pillar of Cloud Native." ],
+  "conferences" : [ "2018spb" ],
+  "talkDay" : 2,
+  "timeString" : "10:30",
+  "time" : 1523950200000
+}, {
+  "id" : "2IjzwFkH84AECgiokAe06O",
+  "name" : "Деревья выражений в enterprise-разработке",
+  "speakers" : [ {
+    "speaker" : "Максим Аршинов",
+    "company" : "Хайтек Груп",
+    "bio" : [ "Соучредитель казанской аутсорс-компании «Хайтек Груп». Кроме ведения бизнеса преподает в «Высшей школе информационных технологий и информационных систем» Казанского федерального университета и ведет блог на Хабре (https://habrahabr.ru/users/marshinov/). По запросу «Как писать тесты» в Google первым результатом выйдет его [статья](https://www.google.co.id/search?q=%D0%BA%D0%B0%D0%BA+%D0%BF%D0%B8%D1%81%D0%B0%D1%82%D1%8C+%D1%82%D0%B5%D1%81%D1%82%D1%8B&oq=%D0%BA%D0%B0%D0%BA+%D0%BF%D0%B8%D1%81%D0%B0%D1%82%D1%8C+%D1%82%D0%B5%D1%81%D1%82%D1%8B&aqs=chrome..69i57j0l5.3597j0j7&sourceid=chrome&ie=UTF-8).\n\nСуммарный стаж в программировании и управлении разработкой — 10 лет. За это время прошел путь от программиста в казанской веб-студии до руководителя отдела качества в финансовой индустрии. Работал в организациях из Казани, Москвы, Питера и Антверпена (Бельгия). \n\nСчитает, что технологии — это не «вещь в себе», а инструменты для достижению целей. Каждая — со своей областью применения." ],
+    "imageUrl" : "//images.ctfassets.net/9n3x4rtjlya6/3SeVAxZijue80YeSy82egI/c3f0fbcbf7a12eb8d9107850f7dd3a74/___________________________.gif"
+  } ],
+  "url" : "https://dotnext-piter.ru/2018/spb/talks/2ijzwfkh84aecgiokae06o",
+  "description" : [ "Для большинства разработчиков использование expression tree ограничивается лямбда-выражениями в LINQ. Зачастую мы вообще не придаем значения тому, как технология работает «под капотом». \n\nЦель доклада — продемонстрировать продвинутые техники работы с деревьями выражений: \n- устранение дублирования кода в LINQ; \n- метапрограмирование; \n- кодогенерация; \n- транспиляция; \n- автоматизация тестирования. \n\nПосле доклада вы будете знать, как пользоваться expression tree напрямую, какие подводные камни приготовила технология и как их обойти." ],
+  "conferences" : [ "2018spb" ],
+  "talkDay" : 2,
+  "timeString" : "10:30",
+  "time" : 1523950200000
+}, {
+  "id" : "6iOds5fxBK4uEim06Y8qEA",
+  "name" : "Lightweight microservice collaboration using HTTP",
+  "speakers" : [ {
+    "speaker" : "Christian Horsdal",
+    "company" : "Horsdal Consult",
+    "bio" : [ "Christian Horsdal is an independent consultant with many years of experience building web and distributed systems on .NET. He is a Nancy committer, a Microsoft MVP, and author of the books \"Instant Nancy Web Development\" and \"Microservices in .NET Core\"." ],
+    "imageUrl" : "//images.ctfassets.net/9n3x4rtjlya6/1HAQY865ucGQ8seWMY8ouo/4a9b22976b58c1dc9b9742c126675a3f/Christian_Horsdal_speaking.jpeg"
+  } ],
+  "url" : "https://dotnext-piter.ru/2018/spb/talks/6iods5fxbk4ueim06y8qea",
+  "description" : [ "With a microservices architecture, system behavior gets spread out across many, many narrowly focused microservices. Much of the functionality of the system depends on those services collaborating. In this talk, we'll explore different modes of collaboration between microservices, how they compare, which are preferable, and how to keep it all simple. Along the way, we'll show how to use HTTP for the different types of collaboration and how to use Nancy to implement them on top of ASP.NET Core." ],
+  "conferences" : [ "2018spb" ],
+  "talkDay" : 1,
+  "timeString" : "16:45",
+  "time" : 1523972700000
+}, {
+  "id" : "5MPieSDyFiKoI86S2U0owq",
+  "name" : "Advanced .NET debugging techniques from a real world investigation",
+  "speakers" : [ {
+    "speaker" : "Christophe Nasarre",
+    "company" : "Criteo",
+    "bio" : [ "In addition to developing and shipping software on Microsoft stacks for 25+ years, Christophe Nasarre has been working as a technical reviewer for MSPress, Addison-Wesley and other publishing companies since 1996 on books such as \"CLR via C#\" and the last editions of Windows Internals. \n\nHe is providing tools and insights on .NET and Windows development via his https://codenasarre.wordpress.com/ blog. Christophe also presented technical sessions on stage both internally at Microsoft or for ISVs and customers at public events such as Microsoft TechDays Paris. " ],
+    "imageUrl" : "//images.ctfassets.net/9n3x4rtjlya6/ggsXMFIsEgwWAuWS0A2s4/c2a995b1bfdfde0dbd742690d89f2890/ChristopheNasarre-Photo.JPG"
+  }, {
+    "speaker" : "Kevin Gosse",
+    "company" : "Criteo",
+    "bio" : [ "Kevin Gosse has been using Microsoft .NET technologies for 10 years, across client, server, and mobile applications. He is currently employed at Criteo, where he works on scalability, debugging, and optimization issues." ],
+    "imageUrl" : "//images.ctfassets.net/9n3x4rtjlya6/50wksfFwowEMGmQamA0oKo/aa8a8b17c6152fb40267c0a299e4cba9/Kevin_Gosse.jpg"
+  } ],
+  "url" : "https://dotnext-piter.ru/2018/spb/talks/5mpiesdyfikoi86s2u0owq",
+  "description" : [ "You know how it feels. After releasing a new version, a service starts behaving in an unexpected way, and it's up to you to save the day. But where to start? \n\nCriteo processes 150 billion requests per day, across more than 4000 front-end servers. As part of the Criteo Performance team, our job is to investigate critical issues in this kind of environment. \n\nIn this talk, you will follow our insights, mistakes and false leads during a real world case. \n\nWe will cover all the phases of the investigation, from the early detection to the actual fix, and we will detail our tricks and tools along the way. Including but not limited to: \n- Using metrics to detect and assess the issue; \n- What you can get... or not from a profiler to make a good assumption; \n- Digging into the CLR data structures with a decompiler, WinDBG and SOS to assert your assumption; \n- Automating memory dump analysis with ClrMD to build your own tools when WinDBG falls short.\n\n" ],
+  "conferences" : [ "2018spb" ],
+  "talkDay" : 2,
+  "timeString" : "13:30",
+  "time" : 1523961000000
+}, {
+  "id" : "1Gw5VWFpjCU4ycY0IwkKCK",
+  "name" : "Xamarin не только вреден, но и полезен",
+  "speakers" : [ {
+    "speaker" : "Дмитрий Моисеев",
+    "company" : "Контур",
+    "bio" : [ "Дмитрий профессионально занимается программированием с 2009 года, разработкой мобильных приложений в СКБ Контуре — с 2013 года. Уверен, что будущее разработки прикладного ПО — в кроссплатформенных решениях." ],
+    "imageUrl" : "//images.ctfassets.net/9n3x4rtjlya6/wrzSM66Kvmmc8Uom2EUGM/9c34d7227117fe692fc9d6836eac9280/f934b4cc-ceea-4f58-94d4-d17d0e11fafe.jpg"
+  } ],
+  "url" : "https://dotnext-piter.ru/2018/spb/talks/1gw5vwfpjcu4ycy0iwkkck",
+  "description" : [ "Мы разрабатываем мобильное приложение для предпринимателей на C# и Xamarin. Два года назад пользоваться этими инструментами было проблематично: сломанная IDE, проблемы с производительностью, кроссплатформенным кодом и биндингом к нативным возможностям платформ. Xamarin.Forms — вообще одна большая проблема. Сейчас ситуация сильно изменилась к лучшему: AOT-компиляция — уже работает в продакшне, производительность — значительно улучшилась, проблемы с биндингами и средой практически пропали. Расскажем, как сейчас использовать Xamarin, чтобы одновременно выпускать релизы сложного приложения на iOS и Android." ],
+  "conferences" : [ "2018spb" ],
+  "talkDay" : 2,
+  "timeString" : "16:45",
+  "time" : 1523972700000
+}, {
+  "id" : "4wrTSTnrEsCQoiyMseo6os",
+  "name" : "Отладка как процесс",
+  "speakers" : [ {
+    "speaker" : "Сергей Щегрикович",
+    "company" : "dotmailer",
+    "bio" : [ "Development Manager в dotmailer, есть опыт в сферах разработки, DevOps, SRE и менеджмента." ],
+    "imageUrl" : "//images.ctfassets.net/9n3x4rtjlya6/57O55psBVusqWSeim8yUOI/1f38945f8d855bbe37528630ab8363ae/___________________________________.jpg"
+  } ],
+  "url" : "https://dotnext-piter.ru/2018/spb/talks/4wrtstnrescqoiymseo6os",
+  "description" : [ "Отладка — самая интересная часть процесса разработки, но это не значит, что мы должны тратить на нее 90% рабочего времени. В докладе расскажем про правила эффективной отладки. На реальных примерах увидим, как соблюдение процесса помогает быстрее находить ошибки в системе. Также поговорим о проактивной отладке и о том, как ее применять. Покажем, как отладка может стать часть архитектуры приложения." ],
+  "conferences" : [ "2018spb" ],
+  "talkDay" : 1,
+  "timeString" : "13:30",
+  "time" : 1523961000000
+}, {
+  "id" : "1FvabD2ey8S06wmAwKIaWq",
+  "name" : "Трудности перехода на ASP.NET Core и Docker",
+  "speakers" : [ {
+    "speaker" : "Александр Иванов",
+    "company" : "Arcadia",
+    "bio" : [ "Пришёл в .NET в 2008 году из 1С, с тех пор не нарадуется свободе в выборе архитектурных решений и старается попробовать их в деле. В данный момент интересуется ASP.NET Core, Docker и смежными технологиями, продвигая их по мере возможности." ],
+    "imageUrl" : "//images.ctfassets.net/9n3x4rtjlya6/54nPOo6mOIumgAe4ceos0o/f2d1044f51037ce9ceb6543b689ec4c1/Alexandr_Ivanov.jpg"
+  } ],
+  "url" : "https://dotnext-piter.ru/2018/spb/talks/1fvabd2ey8s06wmawkiawq",
+  "description" : [ "Многие разработчики, в том числе и мы, уже пробовали ASP.NET Core, Docker, но мало кто использует это в продакшне. В нашем проекте мы решили попробовать эти технологии, потому что эта связка дешевле в содержании и проще в развёртывании, а скорость написания почти не меняется. \n\nЦель доклада — рассказать о трудностях, с которыми нам пришлось столкнуться при создании новых приложений на ASP.NET Core 1.1 и 2.0 под Docker, имея опыт разработки на ASP.NET и не имея никакого реального опыта с Docker. \nКроме того, продемонстрировать способы решения этих проблем и показать, что состояние и динамика развития ASP.NET Core позволяют создавать готовые к продакшн приложения. \n\nИспользованные технологии: ASP.NET Core 1.1 и 2.0, Docker, GitLab CI, Amazon EC2 Container Service." ],
+  "conferences" : [ "2018spb" ],
+  "talkDay" : 2,
+  "timeString" : "15:15",
+  "time" : 1523967300000
+}, {
+  "id" : "2J3on59QE8qQMmsOWEuEw",
+  "name" : "Programming quantum computers in .NET using Microsoft Q#",
+  "speakers" : [ {
+    "speaker" : "Rolf Huisman",
+    "company" : "Info Support",
+    "bio" : [ "Rolf works as an application lifecycle management (ALM), DevOps, and Continuous Delivery (CD) consultant at Info Support. His main focus is using the Microsoft Technologies (e.g. Visual Studio, TFS, Release Management, Azure, Azure Stack, MTM) to improve and accelerate software development and the delivery of added value. For his work he has been awarded by Microsoft as a MVP in the Visual Studio and Development Technologies category. His personal interests include analog electronics, security and discrete mathematics." ],
+    "imageUrl" : "//images.ctfassets.net/9n3x4rtjlya6/eCWqWx3zEcCuuiW2Oakog/4a9b22976b58c1dc9b9742c126675a3f/Rolfh_photo.png"
+  } ],
+  "url" : "https://dotnext-piter.ru/2018/spb/talks/2j3on59qe8qqmmsoweuew",
+  "description" : [ "In the news quantum computers are all the latest rage. While the quantum computers we have today are still research topics and limited to toy examples, it's still a clear vision of what our future will hold. To aid in the development and understanding of quantum protocols, quantum algorithms, quantum error correction, and quantum devices, Quantum Architectures and Computation Group (QuArC) has developed new language Q#. Q# extends .NET framework with the necessary implementations and structures to specify quantum circuits which allow developers to emulate or run a quantum computer as a virtual coprocessor." ],
+  "conferences" : [ "2018spb" ],
+  "talkDay" : 2,
+  "timeString" : "10:30",
+  "time" : 1523950200000
+}, {
+  "id" : "1Fa0f066TySUGkKWMEyam4",
+  "name" : "Особые исключения в .NET",
+  "speakers" : [ {
+    "speaker" : "Евгений Пешков",
+    "company" : "Контур",
+    "bio" : [ ".NET разрабочик в СКБ Контур. В компании занимается общей инфраструктурой: разрабатывает облачную платформу хостинга приложений. Интересуется внутренним устройством .NET и Windows и использует эти знания на практике." ],
+    "imageUrl" : "//images.ctfassets.net/9n3x4rtjlya6/5X8LHepbfUO4a4sCK2MsCM/bb7a1d1df4328ebe8eaec54d06a81eb9/_____________________________.jpg"
+  } ],
+  "url" : "https://dotnext-piter.ru/2018/spb/talks/1fa0f066tysugkkwmeyam4",
+  "description" : [ "При разработке .NET-приложений можно столкнуться с исключениями, поведение которых отличается от всех остальных. Эти исключения происходят при ошибках уровня операционной системы и рантайма, могут возникать неожиданно и приводить к падению всего процесса. Например, StackOverflowException, ThreadAbortException, AccessViolationException, OutOfMemoryException. \n\nВ докладе слушатели узнают об особенностях обработки таких исключений, внутренних механизмах платформы, отличиях между версиями и реализациями .NET, а также о низкоуровневых способах изменить стандартное поведение рантайма." ],
+  "conferences" : [ "2018spb" ],
+  "talkDay" : 2,
+  "timeString" : "16:45",
+  "time" : 1523972700000
+}, {
+  "id" : "1HGzg16ahu8MUAAqOSGAou",
+  "name" : "C# в браузере — миф или реальность?",
+  "speakers" : [ {
+    "speaker" : "Никита Цуканов",
+    "company" : "MandarinBank",
+    "bio" : [ "Начинал в Навителе с разработки под WinCE/Mobile на C/C++. В дальнейшем занимался разработкой VPN-сервиса с кроссплатформенным клиентом на GTK#, торговой площадки Promarket, мейнтейнил Mono для Nokia N900, делал инструментарий для чип-тюнинга автомобилей, мобильный мессенджер с End2End шифрованием, платёжную систему и ещё кучу всякого по мелочи. Имеет обширный опыт разработки подо всё подряд на зоопарке технологий, которым рад поделиться." ],
+    "imageUrl" : "//images.ctfassets.net/9n3x4rtjlya6/5ZEfWT0ibeueyeUkKCsyKC/c8389879f2e3161c2ec2acb4dd6b2d0d/______________.jpg"
+  } ],
+  "url" : "https://dotnext-piter.ru/2018/spb/talks/1hgzg16ahu8muaaqosgaou",
+  "description" : [ "С каждым годом мир всё больше и больше двигается от полноценных устанавливаемых приложений в сторону выполняемых в браузере клиентов к веб-сервисам. Вместе с этим переходом требования к сложности таковых продолжают расти, что ведёт к необходимости использования языков со строгой типизацией и богатыми синтаксическими возможностями. \n\nУспешно заняв ниши серверной, десктопной и мобильной разработки, C# теперь двигается и в браузер. В докладе будут рассмотрены средства компиляции C# в JavaScript, обеспечивающие бесшовную интеграцию с имеющейся веб-экосистемой, а также возможности по запуску программ в полноценной .NET-среде средствами WebAssembly." ],
+  "conferences" : [ "2018spb" ],
+  "talkDay" : 1,
+  "timeString" : "15:15",
+  "time" : 1523967300000
+}, {
+  "id" : "1ukxLW5zNCegEOSgceIWuI",
+  "name" : "Explore the Cosmos (DB) with .NET Core 2.0",
+  "speakers" : [ {
+    "speaker" : "Jeremy Likness",
+    "company" : "Microsoft",
+    "bio" : [ "Jeremy Likness is a Cloud Developer Advocate for Azure at Microsoft. Jeremy has spent two decades building enterprise software with a focus on line of business web applications. He is the author of several highly acclaimed technical books including \"Designing Silverlight Business Applications\" and \"Programming the Windows Runtime by Example\". He has given hundreds of technical presentations during his career as a professional developer that spans two decades. In his free time Jeremy likes to jog, hike, and maintain a 100% plant-based diet." ],
+    "imageUrl" : "//images.ctfassets.net/9n3x4rtjlya6/LWibpC7UiWIG8Ucic4mkg/83f0511210fd8e2ff8bb8c38d9190746/Jeremy_Likness.jpg"
+  } ],
+  "url" : "https://dotnext-piter.ru/2018/spb/talks/1ukxlw5zncegeosgceiwui",
+  "description" : [ "CosmosDB is a NoSQL document-based database that offers a true \"serverless data\" experience. It not only provides point-and-click geo-replication and guaranteed single-digit latency, but empowers you to \"choose your own API\" and support DocumentDB (a SQL-like interface), MongoDB, Gremlin (graph-based), Table Storage or Cassandra. Learn how to set up CosmosDB and build applications using .NET Core with live coding and demonstrations." ],
+  "conferences" : [ "2018spb" ],
+  "talkDay" : 1,
+  "timeString" : "12:00",
+  "time" : 1523955600000
+}, {
+  "id" : "2wJRBmQmpCmu0ioye0sCyA",
+  "name" : "Bot-Tender: a .NET chatbot walks into a bar",
+  "speakers" : [ {
+    "speaker" : "Eran Stiller",
+    "company" : "CodeValue",
+    "bio" : [ "Eran Stiller is a software architect, consultant, instructor and technology addict. With many years of experience in software development and architecture, Eran is recognized as a Microsoft MVP on Microsoft Azure for his contribution to technical communities worldwide. \n\nA сo-founder at CodeValue Ltd., Eran practices software architecture at various clients on an almost daily basis, reviewing many designs in many professional fields. As CodeValue's CTO, Eran is in charge of learning and promoting the usage of various technologies and platforms throughout CodeValue’s projects and customer solutions. \n\nEran instructs various software courses and workshops and is a frequent public speaker at various local and international events, meetups and user groups on topics he finds especially interesting. Furthermore, Eran is the founder of Azure Israel — the largest Azure related meetup in Israel." ],
+    "imageUrl" : "//images.ctfassets.net/9n3x4rtjlya6/1b3OZn9bVoQWWwOKyu8owc/a1afb2452c0ade4bb9d62bc325a5aa53/Eran_Stiller_Profile_Image.jpg"
+  } ],
+  "url" : "https://dotnext-piter.ru/2018/spb/talks/2wjrbmqmpcmu0ioye0scya",
+  "description" : [ "Chatbots are a rising and exciting new way to interact with your users and engage them wherever they are. You most probably have a web site, you might have a mobile application, and if you're really serious (or bored) you might have a desktop application as well. But do you have a chatbot? Be it in Slack, Skype, Facebook or anywhere else — your users are already there, so why not allow them to interact with your service directly from there in a human, natural way? \n\nIn this session, you'll get to know the Microsoft Bot Framework and the Azure Bot Service, as we use them to build a real live .NET bot bartender on stage and tackle all of the development issues one by one. So, do you have a bot yet? Now is a great time!" ],
+  "conferences" : [ "2018spb" ],
+  "talkDay" : 1,
+  "timeString" : "15:15",
+  "time" : 1523967300000
+}, {
+  "id" : "3macvNqLfGeoycKw8kekMm",
+  "name" : "Finding your service boundaries — a practical guide",
+  "speakers" : [ {
+    "speaker" : "Adam Ralph",
+    "company" : "Particular Software",
+    "bio" : [ "Adam is a distributed systems enthusiast and digital nomad. He works for Particular Software, the makers of NServiceBus. He likes to speak, maintain open source projects, and fix white space rule violations. He is a practiced tea drinker and snowboarder. He's often spotted coding in launderettes throughout Western Europe." ],
+    "imageUrl" : "//images.ctfassets.net/9n3x4rtjlya6/2GRAZsAQCAawo4Wc04oSkC/9ae529176b6fbb08e56c42d7d5f3f637/8068c627-10e5-41f4-9d12-50074d0751e0.jpg"
+  } ],
+  "url" : "https://dotnext-piter.ru/2018/spb/talks/3macvnqlfgeoyckw8kekmm",
+  "description" : [ "We know it's useful to split up complex systems. We've seen the benefits of modular deployment of microservices. Dealing with only one piece of code at a time eases our cognitive load. But how do we know where to draw the service boundaries? In complex business domains, it's often difficult to know where to start. When we get our boundaries wrong, the clocks starts ticking. Before long, we hear ourselves say \"it would be easier to re-write it\".\n\nJoin Adam for practical advice on discovering the hidden boundaries in your systems. Help tease out the natural separation of concerns in a sample business domain. During 20 years of developing complex systems, Adam has had plenty of time to get things wrong. Learn to avoid the common pitfalls that can lead us down the path to \"the big re-write\"." ],
+  "conferences" : [ "2018spb" ],
+  "talkDay" : 2,
+  "timeString" : "12:00",
+  "time" : 1523955600000
+}, {
+  "id" : "aPuDgoD3fGYeeG8aSigSq",
+  "name" : "Scratched metal",
+  "speakers" : [ {
+    "speaker" : "Federico Lois",
+    "company" : "Corvalius",
+    "bio" : [ "Federico is a cofounder of Corvalius, a R&D company, and of Codealike, a Developer Analytics company. He has been working on algorithmic performance for the last 10 years, both with CPU and specialized hardware like GPUs. His experience ranges from banking software performance tuning to database engine optimization. He enjoys reading in binary and tinkering with registers and caches. Among his technology interests are highly distributed systems, massively parallel technology, low-level optimization and high-performance computer graphics." ],
+    "imageUrl" : "//images.ctfassets.net/9n3x4rtjlya6/42axRyU9WwAMa8qO86K4mY/d87ee1ad95c76f22d7b6db63c92360b2/federico_lois.jpg"
+  } ],
+  "url" : "https://dotnext-piter.ru/2018/spb/talks/apudgod3fgyeeg8asigsq",
+  "description" : [ "Micro-optimizations at the RavenDB vNext storage engine are critical to achieve 50K+ write requests per second on single node commodity hardware. In this talk we'll explore the use of the new hardware intrinsic introduced on CoreCLR 2.1 in the context of real-life critical path bottlenecks. We will touch on hardcore topics like CPU architecture and its effect on instruction latency and throughput, the effect of cache behaviors (hit/miss ratio, poisoning), prefetching, etc. The talk is aimed at engineers doing micro-optimization and high performance computing." ],
+  "conferences" : [ "2018spb" ],
+  "talkDay" : 2,
+  "timeString" : "15:15",
+  "time" : 1523967300000
+}, {
+  "id" : "3QOmMybiHegwo0Ou2gEKWM",
+  "name" : "Перспективные технологии космонавтики",
+  "speakers" : [ {
+    "speaker" : "Виталий Егоров",
+    "company" : "Блогер Zelenyikot, популяризатор космонавтики в интернете",
+    "bio" : [ "Специалист по связям с общественностью российской частной космической компании Dauria Aerospace. Блогер Zelenyikot, популяризатор космонавтики в интернете, основатель сообществ «Открытый космос» в соцсетях суммарным количеством более 1 млн подписчиков. В 2013 году сумел обнаружить на поверхности Марса посадочный модуль советской автоматической межпланетной станции «Марс-3». Инициатор проекта создания лунного микроспутника для съемки мест посадок «Аполлонов» и «Луноходов»." ],
+    "imageUrl" : "//images.ctfassets.net/9n3x4rtjlya6/1IfH22RLiwyIMwSsciyu2a/fe6c5bc4b6ad81e0ee0fcddd3202173d/2a1c3734-a655-43f5-ad99-1fd8fa5b1196.jpg"
+  } ],
+  "url" : "https://dotnext-piter.ru/2018/spb/talks/3qommybihegwo0ou2gekwm",
+  "description" : [ "TBD" ],
+  "conferences" : [ "2018spb" ],
+  "talkDay" : 2,
+  "timeString" : "18:25",
+  "time" : 1523978700000
+}, {
+  "id" : "38nDQx1AM80gKqAW8YmME4",
+  "name" : "Используем AOT-компиляцию правильно",
+  "speakers" : [ {
+    "speaker" : "Елизавета Голенок",
+    "company" : "МТС ИТ",
+    "bio" : [ "Елизавета – ведущий разработчик в компании МТС Информационные Технологии. \nИмеет опыт разработки и проектирования систем как на С/С++, так и на C# ASP.NET, Mono (от навигационных систем до enterprise-решений).\nОбласть интересов — планирование маршрутов и многоагентные системы, компиляция, LLVM, Clang, низкоуровневая отладка приложений, P/Invoke и Mono." ],
+    "imageUrl" : "//images.ctfassets.net/9n3x4rtjlya6/3xsAQQJNkI2mSqKGEEeacq/47270cdf3be4f143daddc7f6157174a5/DSC_0088_2__1_.jpg"
+  } ],
+  "url" : "https://dotnext-piter.ru/2018/spb/talks/38ndqx1am80gkqaw8ymme4",
+  "description" : [ "Ahead-of-time компиляция — главная тема разговора. \nПоговорим о преимуществах и недостатках AOT, чем AOT отличается от JIT, AOT и Ngen, AOT для Mono и CoreRT, а также о том, как и когда необходимо применять AOT. " ],
+  "conferences" : [ "2018spb" ],
+  "talkDay" : 1,
+  "timeString" : "16:45",
+  "time" : 1523972700000
+}, {
+  "id" : "6rQAI0gfXaoEi2082yA68A",
+  "name" : "Распределённые транзакции умерли, да здравствуют распределённые транзакции!",
+  "speakers" : [ {
+    "speaker" : "Сергей Быков",
+    "company" : "Microsoft",
+    "bio" : [ "Сергей Быков начинал проект Orleans в Microsoft Research и продолжает руководить его разработкой в open source в подразделении Xbox. До прихода в Research Сергей проработал в различных группах Microsoft, от BizTalk и Host Integration Server до встроенных операционных систем для кассовых терминалов и Bing. Удручающая ситуация со средствами разработки для облачных сервисов и распределённых систем побудила его заняться проектом Orleans с целью качественно повысить производительность труда программистов в этой сфере." ],
+    "imageUrl" : "//images.ctfassets.net/9n3x4rtjlya6/CJln1Ln8USeoQuMAkK24c/af9a70307be0bcbd385388768c450810/sbykov2_cropped.jpg"
+  } ],
+  "url" : "https://dotnext-piter.ru/2018/spb/talks/6rqai0gfxaoei2082ya68a",
+  "description" : [ "Как «всем известно», распределённые транзакции умерли с приходом эры интернета. Книги по MTS, MSDTC, J2EE пылятся в музеях, пока программисты пишут облачные сервисы в борьбе с eventual consistent-хранилищами данных типа Cassandra и Mongo. Для финансовых транзакций остаётся бессмертный SQL. \n\nКоманде, работающей над фреймворком Orleans, не привыкать ставить под сомнение общепринятые «истины». Она уже показала, что распределённые объекты при правильном применении могут успешно использоваться для построения эффективных масштабируемых приложений, предложив убедительную альтернативу подходу Erlang/Akka к модели акторов. \n\nПоддержка масштабируемых распределённых транзакций — одна из последних инноваций Orleans, опровергающая популярные заблуждения. Сергей Быков расскажет о ней, а также о других продвинутых функциях фреймворка." ],
+  "conferences" : [ "2018spb" ],
+  "talkDay" : 1,
+  "timeString" : "15:15",
+  "time" : 1523967300000
+}, {
+  "id" : "2n4BioNyao8ckKqWeySw6g",
+  "name" : "What is going on? Application diagnostics using the cloud",
+  "speakers" : [ {
+    "speaker" : "Maarten Balliauw",
+    "company" : "JetBrains",
+    "bio" : [ "Maarten Balliauw loves building web and cloud apps. His main interests are in ASP.NET MVC, C#, Microsoft Azure, PHP and application performance. He co-founded MyGet and is a Developer Advocate at JetBrains. He’s an ASP Insider and a former MVP for Microsoft Azure. Maarten is a frequent speaker at various national and international events and organizes Azure User Group events in Belgium. In his free time, he likes brewing his own beer. Maarten’s blog can be found at http://blog.maartenballiauw.be" ],
+    "imageUrl" : "//images.ctfassets.net/9n3x4rtjlya6/7B9h9Qe4KIssY4CamEskMu/8aa323da34db0791c61a535cbedf1add/maartenballiauw.jpg"
+  } ],
+  "url" : "https://dotnext-piter.ru/2018/spb/talks/2n4bionyao8ckkqweysw6g",
+  "description" : [ "We all like building and deploying applications. But what happens once that’s done? How do we know if our application behaves like we expect it to behave? Of course, logging! But how do we get that data off of our machines? How do we sift through a bunch of seemingly meaningless diagnostics? Can we correlate logging with technical events such as unhandled Exceptions or certain user actions? How do we ensure there’s not too much data being sent? Can we be EU GDPR compliant if we track certain requests? In this session, we’ll look at how we can keep track of diagnostics in any .NET application — using structured logging and Azure Application Insights to make all that data more meaningful." ],
+  "conferences" : [ "2018spb" ],
+  "talkDay" : 1,
+  "timeString" : "18:15",
+  "time" : 1523978100000
+}, {
+  "id" : "3DY35rhzTW6YQ0U82wsOCQ",
+  "name" : "Building microservices with .NET Core and Docker",
+  "speakers" : [ {
+    "speaker" : "Edwin van Wijk",
+    "company" : "Info Support",
+    "bio" : [ "Edwin has been working in IT since 1999 and currently works as a principal solution architect at Info Support. Microsoft MVP in the Visual Studio and Development Technologies category. \n\nHas a strong passion for building distributed systems, systems integration, (web-scale) software architecture and patterns, software craftsmanship, DevOps, Microsoft Azure, .NET (Core) and sharing knowledge about these subjects. Does this by blogging, speaking on events, training people and publishing videos. \n\nThe owner of the Webscale Architecture NL meetup group and initiator of dotnetFlix, a public video channel to inspire the Dutch community to pick-up on innovative technology. \n\nWithin Info Support, Edwin is the lead for the Microsoft Competence Center." ],
+    "imageUrl" : "//images.ctfassets.net/9n3x4rtjlya6/3uHY1Vl6Ug0E4EuYuWksQG/10a195ff5cc14e1327f281c719f92ec1/EdwinVanWijk-Avatar-Large.jpg"
+  } ],
+  "url" : "https://dotnext-piter.ru/2018/spb/talks/3dy35rhztw6yq0u82wsocq",
+  "description" : [ ".NET Core is the “new” way of building .NET applications and it is very cloud- and container friendly. In this session, we’ll show you how you can use these technologies to build containerized microservices based applications. The sessions contains 20% of slides and 80% of code." ],
+  "conferences" : [ "2018spb" ],
+  "talkDay" : 2,
+  "timeString" : "16:45",
+  "time" : 1523972700000
+}, {
+  "id" : "2fayDq1TPuowcoGGowImii",
+  "name" : "Безбажная пиццерия",
+  "speakers" : [ {
+    "speaker" : "Юлия Ковалева",
+    "company" : "Dodo Pizza",
+    "bio" : [ "Юлия окончила магистратуру в ЛЭТИ, решив, что свое алтайское фундаментальное образование нужно сделать более прикладным. После магистратуры она уже 5-й год работает в сфере тестирования ПО и не жалеет об этом. Пожалуй, поиск неверного решения или некорректно поставленного условия задачи – это навык, привитый еще со времен школьных математических боев. Юлия успела пройти путь от аналитика-тестировщика с жестким менеджментом, где шаг влево-вправо и расстрел, до автоматизатора c обязанностями лида. Она не боится экспериментов, незнакомых ей языков разработки и фреймворков: главное же сделать работу качественно и помочь команде. Юлия надеется, что апрельский DotNext порадует всех участников не только интересными докладами, но и своей питерской душевной атмосферой." ],
+    "imageUrl" : "//images.ctfassets.net/9n3x4rtjlya6/4IEysO7nSgmUou4aQOowGu/00071695fe399861a9db50aa15502b15/kovaleva.jpg"
+  } ],
+  "url" : "https://dotnext-piter.ru/2018/spb/talks/2faydq1tpuowcoggowimii",
+  "description" : [ "Как не потерять качество при переходе от монолитной архитектуры к сервисной? Как помочь тестам находить баги: писать тесты или все же генерировать их? \n\nВ докладе не будет «серебряной пули», которая бы помогла вам построить свою гибкую команду или же сделать регресс UI по-другому. Мы сосредоточимся в основном на проблеме эффективных тестов с использованием property based-подхода. На примерах будет показано, как можно использовать FsCheck в связке с C#. \n\nНаверняка вы сталкивались с ситуацией, когда unit-тесты на методы написаны, тестировщики регресс провели, а баги возникают словно ниоткуда. Команда разработки системы Dodo IS не стала исключением. При разделении продукта на смысловые части остро встал вопрос о том, кто будет проверять появившиеся сервисы и как быть с их интеграцией. \n\nТесное взаимодействие бизнеса, QA и разработчиков, эксперименты с разными подходами и практиками, внедрение тестов в CI – наш путь к быстрому фидбэку и повышению качества поставляемого клиентам продукта. \nСервис без багов – залог вкусной пиццы…" ],
+  "conferences" : [ "2018spb" ],
+  "talkDay" : 1,
+  "timeString" : "13:30",
+  "time" : 1523961000000
+}, {
+  "id" : "1F8C5dTgSYgSgU8OWGyEwA",
+  "name" : "Write your own C# static code analysis tool to drive business rules",
+  "speakers" : [ {
+    "speaker" : "Raffaele Rialdi",
+    "company" : "Vevy Europe",
+    "bio" : [ "Raffaele Rialdi is a senior Software Architect working as a consultant, speaker and trainer. Since 2003, he is a Microsoft MVP in the Developer Security category. His passion for the community brought him to be a member of the board of UGIdotNET, president of DotNetLiguria and co-founder of the Italian C++ user group. He is currently working as an architect and developer on the backend of an enterprise project with a specific focus on code generation and working on cross-platform mobile and IoT development in both C# and C++ languages." ],
+    "imageUrl" : "//images.ctfassets.net/9n3x4rtjlya6/4nWFCSkE5G40gI0EYcQuuC/70d646613dc589f6914a235aa4e42a1f/rialdi__1_.jpg"
+  } ],
+  "url" : "https://dotnext-piter.ru/2018/spb/talks/1f8c5dtgsygsgu8owgyewa",
+  "description" : [ "We wrote a lot of code and just after 6 months we spend a lot of time in studying, understanding and refining it again and again. Code is alive and there is no documentation that can be as exhaustive as the code itself. So, we start using a bunch of tools to manually inspect the code and fully understand what happens to instances of a given type, which parts of the code really need certain dependencies, or which APIs are used in a part of the codebase. This job is even tougher when the codebase comes from a third-party that is extending our app. \n\nThe .NET Compiler Platform (Roslyn) gives us the opportunity to write tools to understand the sources from a business rule perspective and extract the information required to identify usage patterns and enforcing security prescriptions. \n\nThe idea is to raise the bar of the classic code analysis, writing custom tools and Visual Studio analyzers targeting the specificities of the application being developed." ],
+  "conferences" : [ "2018spb" ],
+  "talkDay" : 1,
+  "timeString" : "16:45",
+  "time" : 1523972700000
+}, {
+  "id" : "4vBvsMXFi8uCMQy2uay80y",
+  "name" : "How containers work",
+  "speakers" : [ {
+    "speaker" : "Sasha Goldshtein",
+    "company" : "Sela Group",
+    "bio" : [ "Sasha Goldshtein is the CTO of Sela Group, Microsoft MVP and Regional Director, Pluralsight and O'Reilly author, and an international consultant and trainer. Sasha is the author of \"Introducing Windows 7 for Developers\" (Microsoft Press, 2009) and \"Pro .NET Performance\" (Apress, 2012), a prolific blogger and open source contributor, and author of numerous training courses including .NET Debugging, .NET Performance, Android Application Development, and Modern C++. His consulting work revolves mainly around distributed architecture, production debugging and performance diagnostics, and mobile application development." ],
+    "imageUrl" : "//images.ctfassets.net/9n3x4rtjlya6/6pZNf7SrhmO06K68Qu4gwu/0040599e2921952556b290bfbcb5b014/Ff9Nvp1-mU0.jpg"
+  } ],
+  "url" : "https://dotnext-piter.ru/2018/spb/talks/4vbvsmxfi8ucmqy2uay80y",
+  "description" : [ "Containers are rivaled only by \"blockchain\" and \"machine learning\" in recent years' hype trends, but they are still quite poorly understood. This talk exposes containers for what they are: ordinary processes, with a bit of isolation, resource quotas, and security sandboxing sprinkled on top. You will learn why containers are interesting and useful, how namespaces isolate containers from each other but can also be used to share resources between containers, how resource throttling works and how it affects the .NET runtime, and how to build minimal .NET Core containers that don't carry 500MB of Ubuntu userspace libraries and tools that you don't need. At the end of the talk, you'll be the go-to person for weird container tricks and scenarios." ],
+  "conferences" : [ "2018spb" ],
+  "talkDay" : 1,
+  "timeString" : "13:30",
+  "time" : 1523961000000
+}, {
+  "id" : "2RIOYAKMuAKcAk0euK0wW8",
+  "name" : "Apps, algorithms and abstractions: decoding our digital world",
+  "speakers" : [ {
+    "speaker" : "Dylan Beattie",
+    "company" : "Skills Matter",
+    "bio" : [ "Dylan Beattie is a systems architect and software developer, who has built everything from tiny standalone websites to large-scale distributed systems. By day, he’s the systems architect at Spotlight, where he works on HTTP APIs, distributed systems, and the architectural challenges of delivering cutting-edge online services in a company with nearly ninety years of legacy. He’s been working with Spotlight since 2000, and his first-hand experience of watching an organisation (and their code) evolving over more than a decade has given him a unique insight into how API design, distributed systems, Conway's Law, working with legacy code, and recruitment can all influence a company’s products and culture. Alongside his work at Spotlight, Dylan is actively involved in the software development community. He’s one of the organisers of the London .NET User Group, and in 2016 he spoke at software conferences including Oredev in Sweden, NDC in London, Sydney and Oslo, Tampere Goes Agile in Finland, and BuildStuff in Lithuania and Ukraine. \n\nDylan grew up in southern Africa, moving to the UK when he was ten. He wrote his first web page in 1992, and went on to study Computer Science at the University of Southampton. He’s a guitar player, musician and aspiring songwriter; his other interests include skiing, scuba diving, Lego, cats, travel and photography, and he's normally found hanging around user groups, pubs and rock bars in London wearing a big black hat." ],
+    "imageUrl" : "//images.ctfassets.net/9n3x4rtjlya6/6rO2Ldm1Q46UI6sIygO2uI/ae0de4943fbd0a5f24b9f1ef38c1553f/dylanbeattie.jpg"
+  } ],
+  "url" : "https://dotnext-piter.ru/2018/spb/talks/2rioyakmuakcak0euk0ww8",
+  "description" : [ "Picture the scene: you’re on a train, your phone goes ‘ping’, you take it out of your pocket and hey — someone sent you a message! It’s a video of a kitten falling off a chair! You send back \"LOL\", you put your phone back in your pocket… but have you ever stopped to think about what’s actually involved in making that happen? Inside even the most basic smartphone there are literally hundreds of innovations, algorithms and inventions — but how do they really work? How were they developed? And what’s the next generation of algorithms and applications going to look like? \n\nIn this talk, we’ll take a deep dive into the technology behind those everyday experiences, and demystify the algorithms and abstractions that make our digital world go round. We’ll look at everything from network addressing algorithms, frequency-hopping cellular data networks and shortest path optimisation, to wavelet compression, fingerprint recognition and media encoding schemes. Whether you’re a programmer, a product owner or just somebody who loves using the latest tech, after watching this talk you’ll never look at your phone quite the same way again." ],
+  "conferences" : [ "2018spb" ],
+  "talkDay" : 1,
+  "timeString" : "10:30",
+  "time" : 1523950200000
+}, {
+  "id" : "2PV01zLEtqIKc0CguyAOEC",
+  "name" : "Взаимодействие микросервисов по HTTP/2",
+  "speakers" : [ {
+    "speaker" : "Евгений Жиров",
+    "company" : "Контур",
+    "bio" : [ "C# разработчик в инфраструктурной команде СКБ Контур. Занимается разработкой и поддержкой общих библиотек, системы распределенных трассировок, другими высокопроизводительными сервисами. \n\nИнтересуется созданием надежных и масштабируемых HTTP-сервисов, написанием производительного кода, C# и .NET, робототехникой и IoT. Евгению нравится делиться знаниями с другими, поэтому он прокачивает навык публичных выступлений и преподает несколько курсов для студентов в УрФУ." ],
+    "imageUrl" : "//images.ctfassets.net/9n3x4rtjlya6/5E4TR56b6gumE0w8Kusoao/710684415114b5ccbb1dad14a6506fa7/zhirov_e.jpg"
+  } ],
+  "url" : "https://dotnext-piter.ru/2018/spb/talks/2pv01zletqikc0cguyaoec",
+  "description" : [ "HTTP/2 не только ускоряет загрузку веб-страниц, но и оптимизирует взаимодействие микросервисов в распределённой системе. Наша инфраструктурная команда использовала HTTP/2 в новом сервисе и столкнулась с интересными проблемами. Вас ждет увлекательная fail story про производительность, магические константы и утечки unmanaged-памяти. \n\nЦель доклада — поделиться опытом использования HTTP/2 для оптимизации межсервисного взаимодействия в условиях .NET framework и Windows. \n\nДоклад будет интересен любителям детективных историй про производительность; разработчикам микросервисов под .NET; людям, которые занимаются нагрузочным тестированием HTTP-сервисов. \n\nКлючевые слова: .NET, C#, HTTP/2, WinDbg, microservice architecture, long polling, load testing." ],
+  "conferences" : [ "2018spb" ],
+  "talkDay" : 2,
+  "timeString" : "12:00",
+  "time" : 1523955600000
+}, {
+  "id" : "53Zc0XzxEcQgkAy8EI4eGg",
+  "name" : "Reactive Extensions (Rx) 101",
+  "speakers" : [ {
+    "speaker" : "Tamir Dresher",
+    "company" : "CodeValue",
+    "bio" : [ "Tamir Dresher is a software architect, consultant, instructor and technology addict that leads the Cloud Division at CodeValue Israel. \nWith more than 10 years of experience of developing and architecting systems both on-premise and on the cloud, Tamir holds the title of Microsoft MVP in Visual Studio and Development Technologies, and he is the author of the book \"Rx.NET in Action\" published by Manning (http://manning.com/dresher/). \n\nHe blogs at http://blogs.microsoft.co.il/iblogger/ and you can reach out to him via Twitter @tamir_dresher." ],
+    "imageUrl" : "//images.ctfassets.net/9n3x4rtjlya6/lAE3AO9LwGmi20WGSmuGe/6ce0d7ae4168f08a9a9a8088fc05eb96/Tamir_Dresher_profile-500px.png"
+  } ],
+  "url" : "https://dotnext-piter.ru/2018/spb/talks/53zc0xzxecqgkay8ei4egg",
+  "description" : [ "Reactive applications are designed to handle asynchronous events in a way that maximizes responsiveness, resiliency, and elasticity. Reactive Extensions (Rx) is a library that abstracts away the sources of events and provides tools to handle them in a reactive way. \n\nWith Rx, filtering events, composing event sources, transforming events, and dealing with errors all become much simpler than with traditional tools and paradigms. \n\nReactive Extensions requires a change of mindset: you’ll learn to think about your application as a message hub that knows how to react to messages. After this session, you’ll understand better what Rx is, and you’ll have a starting point from which to effectively use it in your application." ],
+  "conferences" : [ "2018spb" ],
+  "talkDay" : 2,
+  "timeString" : "15:15",
+  "time" : 1523967300000
+}, {
+  "id" : "1UhTofV0o0OCGyQweuqGKQ",
+  "name" : "Building real world production-ready web APIs with .NET Core",
+  "speakers" : [ {
+    "speaker" : "Alex Thissen",
+    "company" : "Xpirit",
+    "bio" : [ "Alex has been involved in application development since the late nineties and worked as a lead developer and architect at large enterprises and small companies. He spends his time teaching other developers the details of the Microsoft development platform and frameworks, and coaches architects to design and build modern distributed applications at cloud scale. He has received the Microsoft Most Valuable Professional award for Visual Studio and Development Technologies 10 times. In his spare time, Alex likes to participate in all kinds of sport and loves playing and programming new and retro video games." ],
+    "imageUrl" : "//images.ctfassets.net/9n3x4rtjlya6/5VgXMPWfXUaIGKAKmk6Cgw/1f5a7d7e0303159aa656fdc0457e5cc3/4000663.jpeg"
+  } ],
+  "url" : "https://dotnext-piter.ru/2018/spb/talks/1uhtofv0o0ocgyqweuqgkq",
+  "description" : [ "You might have started building your microservices-based web APIs using .NET Core. And you are ready to go into production. Did you think about hosting, scaling, monitoring, versioning, documentation, resiliency, and logging? Because going into production with just your business logic is not enough. In this session, you will learn how you have to build your evolving web APIs using .NET Core and the Microsoft platform and run it in a robust, hyper-scale production environment." ],
+  "conferences" : [ "2018spb" ],
+  "talkDay" : 2,
+  "timeString" : "13:30",
+  "time" : 1523961000000
+}, {
+  "id" : "3Z63rzboesMK6iGocKGMmU",
+  "name" : "Обработка естественного языка (NLP) в .NET",
+  "speakers" : [ {
+    "speaker" : "Сергей Тихон",
+    "company" : "EPAM Systems",
+    "bio" : [ "Solution architect в EPAM Systems, автор F# Weekly, Microsoft F# MVP, open source энтузиаст — автор проектов Stanford.NLP.NET, OpenNLP.NET, SwaggerProvider и некоторых других fsprojects." ],
+    "imageUrl" : "//images.ctfassets.net/9n3x4rtjlya6/19iCksCxNkcQOg0O6EcAKG/151aa3df02cb84ed5d4e10c4edd22292/6db43e6e-d3dc-485d-9ea0-3419909c4a72.jpg"
+  } ],
+  "url" : "https://dotnext-piter.ru/2018/spb/talks/3z63rzboesmk6igockgmmu",
+  "description" : [ "Текст — основной источник информации в мире, речь — основной способ взаимодействия между людьми, который также становится популярным способом взаимодействия с компьютером. Такие приложения, как поисковики, чат-боты и персональные ассистенты уже используют знания, извлеченные из текстов и речи. Может ли ваше приложение использовать эти знания? \n\nВо время доклада мы обсудим NLP-возможности, доступные нам из коробки в .NET framework, а также предоставляемые облачными сервисами, такими как Language Understanding Service (LUIS из Azure Cognitive Services) и IBM Watson. Мы также рассмотрим наиболее популярные NLP пакеты из NuGet (Stanford.NLP.NET, OpenNLP.NET и др.)" ],
+  "conferences" : [ "2018spb" ],
+  "talkDay" : 2,
+  "timeString" : "13:30",
+  "time" : 1523961000000
+}, {
+  "id" : "2QATBxw8HSuCAIKiOSmoEM",
+  "name" : "Fastware",
+  "speakers" : [ {
+    "speaker" : "Andrei Alexandrescu",
+    "company" : "The D Language Foundation",
+    "bio" : [ "Romanian-born Computer Scientist Andrei Alexandrescu is an expert in a broad range of topics including software systems design and implementation, programming language design, library design, all aspects of the C++ and D programming languages, Machine Learning, and Natural Language Processing. His creative approach to problem solving, broad knowledge, and charismatic presence make Andrei a sought-after invited speaker at conferences worldwide. \n\nAndrei's books and articles have had a marked influence in the software industry. He is the author of such best-sellers as \"Modern C++ Design\", \"C++ Coding Standards\" (in co-authorship with Herb Sutter), \"The D Programming Language\", along with the articles like \"Simplify Your Exception-Safe Code - Forever\" (in co-authorship with Petru Marginean) and \"Mojo: Move of Joint Objects\". The full list can be found here: http://erdani.com/index.php/articles/" ],
+    "imageUrl" : "//images.ctfassets.net/9n3x4rtjlya6/2LFmFFSz4AmoIuESwUKwsc/642806c09d2485dd929a8947af3e735e/Andrei_Alexandrescu__1_.jpg"
+  } ],
+  "url" : "https://dotnext-piter.ru/2018/spb/talks/2qatbxw8hsucaikiosmoem",
+  "description" : [ "Optimization — making code faster — is an essential ingredient of modern computing. The speed of light is limited, so we're unable to increase computer clock speed anymore; in other news, the matter is composed of discrete atoms so we can't make circuits much smaller than they already are. That means more speed for essential tasks — ranging from speech recognition to self-driving cars to General Artificial Intelligence — is to be found in people's minds. \n\nThis talk discusses, with simple examples, a few algorithm design principles that can be applied consistently to improve, or sometimes entirely redesign, algorithms for better performance." ],
+  "conferences" : [ "2018spb" ],
+  "talkDay" : 1,
+  "timeString" : "12:00",
+  "time" : 1523955600000
+}, {
+  "id" : "6dlRKu3cRyuGkUo4AWIusU",
+  "name" : "Pitfalls of high-level cryptography",
+  "speakers" : [ {
+    "speaker" : "Stan Drapkin",
+    "company" : " ",
+    "bio" : [ "Stan Drapkin is a hands-on technical leader, manager, and security and \ncompliance expert. He is focused on hiring, training, and leading top-talent engineering teams using .NET to build highly secure cloud-based solutions for strongly regulated environments. \n\nStan has computer science and MBA degrees, as well as more than 16 years of .NET Framework experience. He picked up .NET 1.0-beta in 2001, while working as an engineer at Microsoft, and has been immersed in .NET evolution ever since." ],
+    "imageUrl" : "//images.ctfassets.net/9n3x4rtjlya6/6f1dbAsH7yOaAcIWO4auAi/fec3b37b40efc48f1cc913a809d89bea/Stan_Drapkin.JPG"
+  } ],
+  "url" : "https://dotnext-piter.ru/2018/spb/talks/6dlrku3cryugkuo4awiusu",
+  "description" : [ "Continuation of past DotNext talks which covered the pitfalls of low-level crypto APIs in .NET and introduced high-level cryptography. Their story does not end there — high-level crypto has its own challenges. Second, more advanced part of the talk will also touch upon public-key .NET crypto." ],
+  "conferences" : [ "2018spb" ],
+  "talkDay" : 2,
+  "timeString" : "12:00",
+  "time" : 1523955600000
+}, {
+  "id" : "24p2WxuLfSCwAqyimC6Us8",
+  "name" : "Построение SSO на примере Identity Server 4.0 (.NET Core 2.0)",
+  "speakers" : [ {
+    "speaker" : "Вячеслав Михайлов",
+    "company" : "DataArt",
+    "bio" : [ "Вячеслав — solution architect в компании DataArt. Профессиональное образование в области разработки программного обеспечения, занимается IT уже 20 лет. Основной опыт в финансовой индустрии и информационной безопасности. Вячеслав имеет богатый опыт разработки и проектирования различных приложений, начиная от итеративной переработки устаревших сложных легаси-систем и заканчивая проектированием и разработкой современных масштабируемых микросервисных приложений с минимальным временем простоя." ],
+    "imageUrl" : "//images.ctfassets.net/9n3x4rtjlya6/3dPjtG4f8cQmwGyUIMssmG/89a107c0071639f85561f6714413e1cd/___________________3x4.jpg"
+  } ],
+  "url" : "https://dotnext-piter.ru/2018/spb/talks/24p2wxulfscwaqyimc6us8",
+  "description" : [ "В докладе расскажем, как легко и просто построить инфраструктуру Signle Sign-On, используя набор готовых компонентов. Разберем детали работы протокола OAuth и различные варианты протоколов аутентификации в зависимости от используемых архитектур. \nПосле доклада вы будете знать, как добавить в ваше приложение возможности SSO, используя всего несколько строчек кода." ],
+  "conferences" : [ "2018spb" ],
+  "talkDay" : 1,
+  "timeString" : "12:00",
+  "time" : 1523955600000
+}, {
+  "id" : "3PJrHXFmjKmAC82YaCOiQW",
+  "name" : "Многопоточные структуры данных в .NET: как это работает?",
+  "speakers" : [ {
+    "speaker" : "Дмитрий Иванов",
+    "company" : "JetBrains",
+    "bio" : [ "Техлид JetBrains Rider, разработчик ядра ReSharper: структур данных, кэшей, многопоточности. В компании JetBrains с 2011 года, до этого руководил разработкой серверных решений в Yota. Окончил матмех СПбГУ в 2006 году. Регулярный спикер DotNext." ],
+    "imageUrl" : "//images.ctfassets.net/9n3x4rtjlya6/32HfL0tOWk6Eo66wyawUcu/9a107e98c4271f36de7302d1188e2802/_____________________________.jpg"
+  } ],
+  "url" : "https://dotnext-piter.ru/2018/spb/talks/3pjrhxfmjkmac82yacoiqw",
+  "description" : [ "В докладе речь пойдет об алгоритмах, стоящих за коллекциями в System.Collections.Concurrent. Пошагово, с примерами объясним сложные алгоритмы. Также рассмотрим дизайн API многопоточной коллекции. \n\nВажно: для понимания доклада необходимо знать основы параллельного программирования, включая Monitors, Semaphores, read-write locks, атомарные операции (Interlocked) и т.д." ],
+  "conferences" : [ "2018spb" ],
+  "talkDay" : 1,
+  "timeString" : "18:15",
+  "time" : 1523978100000
+} ]

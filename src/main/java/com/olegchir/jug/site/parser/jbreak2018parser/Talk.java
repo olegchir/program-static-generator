@@ -1,8 +1,13 @@
 package com.olegchir.jug.site.parser.jbreak2018parser;
 
+import org.apache.commons.lang.StringEscapeUtils;
+import org.apache.commons.lang.StringUtils;
+
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+
+import static com.olegchir.jug.site.parser.jbreak2018parser.LangUtil.escapeHtml;
 
 public class Talk {
     private String id;
@@ -15,11 +20,32 @@ public class Talk {
     private String timeString;
     private Date time;
 
+    public void htmlEscape() {
+        this.name = escapeHtml(this.name);
+        for (Speaker speaker : speakers) {
+            speaker.htmlEscape();
+        }
+        for (int i=0; i < description.size(); i++) {
+            description.set(i, LangUtil.escapeChevronQuotes(description.get(i)));
+        }
+    }
+
     public void replaceWith(Talk talk) {
-        this.name = talk.name;
-        this.speakers = talk.speakers;
-        this.url = talk.url;
-        this.description = talk.description;
+        if (!StringUtils.isEmpty(talk.name)) {
+            this.name = talk.name;
+        }
+
+        if (null != talk.speakers) {
+            this.speakers = talk.speakers;
+        }
+
+        if (!StringUtils.isEmpty(talk.url)) {
+            this.url = talk.url;
+        }
+
+        if (null != talk.description) {
+            this.description = talk.description;
+        }
     }
 
     public String getId() {

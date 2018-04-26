@@ -17,6 +17,9 @@ import org.apache.velocity.runtime.RuntimeServices;
 import org.apache.velocity.runtime.RuntimeSingleton;
 import org.apache.velocity.runtime.parser.ParseException;
 import org.apache.velocity.runtime.parser.node.SimpleNode;
+import org.commonmark.node.Node;
+import org.commonmark.parser.Parser;
+import org.commonmark.renderer.html.HtmlRenderer;
 import org.joda.time.DateTime;
 import org.joda.time.DateTimeZone;
 import org.openqa.selenium.By;
@@ -36,16 +39,22 @@ import java.util.stream.Collectors;
 public class AppRunner implements CommandLineRunner {
     public String pUrl = "https://dotnext-piter.ru/2018/spb/talks";
     public String pWorkDir = "/Users/olegchir/tmp/jpoint";
+    public String pConfSelector = "2018spb";
+    public String REPLACEMENTS_DIR_PATH = pWorkDir + "/replacements";
+    public String pTemplate = "default";
     public int imageNum = 0;
     public static boolean DONT_CACHE = false;
 
     public CDAClient contentful = null;
+    public Parser mdparser = Parser.builder().build();
+    HtmlRenderer mdrenderer = HtmlRenderer.builder().build();
 
     @Override
     public void run(String... args) throws Exception {
         initParams();
 
         FileUtils.forceMkdir(new File(pWorkDir));
+        FileUtils.forceMkdir(new File(REPLACEMENTS_DIR_PATH));
 
         List<Talk> talks;
         if (!cacheExists() || DONT_CACHE) {
@@ -59,6 +68,9 @@ public class AppRunner implements CommandLineRunner {
 
         applyReplacements(talks);
         applyStopList(talks);
+        applyWhiteList(talks);
+        unmarkdown(talks);
+        htmlEscape(talks);
 
         String result = renderTemplate(talks);
         saveResult(result);
@@ -79,6 +91,20 @@ public class AppRunner implements CommandLineRunner {
             pWorkDir = workdir;
         } else {
             System.out.println("Using default working directory");
+        }
+
+        String conference = System.getProperty("conference");
+        if (null != conference) {
+            pConfSelector = conference;
+        } else {
+            System.out.println("Using default conference selector");
+        }
+
+        String template = System.getProperty("template");
+        if (null != template) {
+            pTemplate = template;
+        } else {
+            System.out.println("Using default template");
         }
 
         String contentfulSpace = System.getProperty("contentfulSpace");
@@ -113,6 +139,39 @@ public class AppRunner implements CommandLineRunner {
         return talks;
     }
 
+    public String unmarkdown(String src) {
+        Node document = mdparser.parse(src);
+        String rendered = mdrenderer.render(document);
+        return rendered;
+    }
+
+    public void htmlEscape(List<Talk> talks) {
+        for (Talk talk : talks) {
+            talk.htmlEscape();
+        }
+    }
+
+    public void unmarkdown(List<Talk> talks) {
+        for (Talk talk : talks) {
+            List<String> descriptions = talk.getDescription();
+            List<String> newDescriptions = new ArrayList<>();
+            for (String description : descriptions) {
+                newDescriptions.add(unmarkdown(description));
+            }
+            talk.setDescription(newDescriptions);
+
+            List<Speaker> speakers = talk.getSpeakers();
+            for (Speaker speaker : speakers) {
+                List<String> bios = speaker.getBio();
+                List<String> newBios = new ArrayList<>();
+                for (String bio : bios) {
+                    newBios.add(unmarkdown(bio));
+                }
+                speaker.setBio(newBios);
+            }
+        }
+    }
+
     public String getReplatecementsFileName() {
         return pWorkDir + File.separator + "replacements.json";
     }
@@ -129,6 +188,41 @@ public class AppRunner implements CommandLineRunner {
                 }
             }
         }
+
+        for (Talk talk: cache) {
+            String baseFileName = REPLACEMENTS_DIR_PATH + File.separator + talk.getId();
+
+            String descriptionFilename = baseFileName + "-description.md";
+            if (new File(descriptionFilename).exists()) {
+                String description = new String(Files.readAllBytes(Paths.get(descriptionFilename)));
+                talk.setDescription(Collections.singletonList(description));
+            }
+
+            List<Speaker> speakers = talk.getSpeakers();
+
+            int curr = 1;
+            for (Speaker speaker : speakers) {
+                String speakerFilename = baseFileName + "-bio-"+Integer.toString(curr)+".md";
+                if (new File(speakerFilename).exists()) {
+                    String bio = new String(Files.readAllBytes(Paths.get(speakerFilename)));
+                    speaker.setBio(Collections.singletonList(bio));
+                }
+                curr++;
+            }
+        }
+
+
+        for (Talk replacement: replacements) {
+            for (Talk cacheItem: cache) {
+                if (replacement.getId().equals(cacheItem.getId())) {
+                    cacheItem.replaceWith(replacement);
+                }
+            }
+        }
+    }
+
+    public String getWhiteListFileName() {
+        return pWorkDir + File.separator + "whitelist.txt";
     }
 
     public String getStopListFileName() {
@@ -151,19 +245,44 @@ public class AppRunner implements CommandLineRunner {
         }
     }
 
+    public void applyWhiteList(List<Talk> cache) throws IOException {
+        if (!Files.exists(Paths.get(getWhiteListFileName()))) {
+            return;
+        }
+
+        List<String> whitelist = Files.lines(Paths.get(getWhiteListFileName())).collect(Collectors.toList());
+        if (null == whitelist || whitelist.size() < 1) {
+            return;
+        }
+
+        for (Iterator<Talk> iterator = cache.iterator(); iterator.hasNext();) {
+            Talk cacheItem = iterator.next();
+            boolean found = false;
+            for (String whiteword: whitelist) {
+                if (cacheItem.getId().equals(whiteword)) {
+                    found = true;
+                    break;
+                }
+            }
+            if (!found) {
+                iterator.remove();
+            }
+        }
+    }
+
     public String getCacheFileName() {
         return pWorkDir + File.separator + "cache.json";
     }
 
     public void saveResult(String template) throws IOException {
-        String filename = String.format("%s%s.md", pWorkDir + File.separator, "result");
+        String filename = String.format("%s%s.html", pWorkDir + File.separator, "result");
         Path path = Paths.get(filename);
         Files.deleteIfExists(path);
         Files.write(path, template.getBytes());
     }
 
     public String getTemplateFileName() {
-        return pWorkDir + File.separator + "template.vm";
+        return pWorkDir + File.separator + pTemplate + ".vm";
     }
 
     public String renderTemplate(List<Talk> talks) throws IOException, ParseException {
@@ -175,10 +294,11 @@ public class AppRunner implements CommandLineRunner {
 
         File tfile = new File(getTemplateFileName());
         String content = new String(Files.readAllBytes(tfile.toPath()));
-         /*  first, get and initialize an engine  */
+
+
         VelocityEngine ve = new VelocityEngine();
         ve.init();
-        /*  next, get the Template  */
+
         RuntimeServices runtimeServices = RuntimeSingleton.getRuntimeServices();
         StringReader reader = new StringReader(content);
         SimpleNode node = runtimeServices.parse(reader, "Template");
@@ -186,16 +306,15 @@ public class AppRunner implements CommandLineRunner {
         template.setRuntimeServices(runtimeServices);
         template.setData(node);
         template.initDocument();
-        /*  create a context and add data */
+
         VelocityContext context = new VelocityContext();
         context.put("dayToTalk", dayToTalk);
         context.put("header",  getHeader());
         context.put("footer", getFooter());
 
-        /* now render the template into a StringWriter */
         StringWriter writer = new StringWriter();
         template.merge( context, writer );
-        /* show the World */
+
         return writer.toString();
     }
 
@@ -217,15 +336,56 @@ public class AppRunner implements CommandLineRunner {
         return content.stream().collect(Collectors.joining("\n"));
     }
 
+    public List<String> extractFieldIds(CDAEntry src) {
+        return src.contentType().fields().stream().map(CDAField::id).collect(Collectors.toList());
+    }
+
+    public <T> T findSynonym(CDAEntry src, Class<T> type, String... synonyms) {
+        List<String> ids = extractFieldIds(src);
+        for (String synonym : synonyms) {
+            if (ids.contains(synonym)) {
+                return src.getField(synonym);
+            }
+        }
+        throw new RuntimeException(String.format("no sysnonyms parsed from: %s, lookup list: %s", src.toString(), Arrays.toString(synonyms)));
+    }
+
+    public <T> List<T> findSynonymList(CDAEntry src, Class<T> elementType, String... synonyms) {
+        List<String> ids = extractFieldIds(src);
+        for (String synonym : synonyms) {
+            if (ids.contains(synonym)) {
+                return src.getField(synonym);
+            }
+        }
+        throw new RuntimeException(String.format("no sysnonyms parsed from: %s, lookup list: %s", src.toString(), Arrays.toString(synonyms)));
+    }
+
     public List<Talk> findTalks() {
         List<Talk> talks = new ArrayList<>();
         int currTalkNumber = -1;
 
         try {
-            CDAArray ctalks = contentful.fetch(CDAEntry.class)
-                            .withContentType("talks")
-                            .where("fields.conference[in]","2018spb")
-                            .all();
+            CDAArray ctalks = null;
+
+            try {
+                ctalks = contentful.fetch(CDAEntry.class)
+                                .withContentType("talks")
+                                .where("fields.conference[in]",pConfSelector)
+                                .all();
+            } catch (Exception e) {
+                //It's OK here
+            }
+
+            if (null == ctalks) {
+                ctalks = contentful.fetch(CDAEntry.class)
+                        .withContentType("talks")
+                        .where("fields.conferences[in]",pConfSelector)
+                        .all();
+            }
+
+            if (null == ctalks) {
+                System.out.println("Can't select initial dataset");
+            }
 
             for (CDAResource cres : ctalks.items()) {
 
@@ -240,22 +400,18 @@ public class AppRunner implements CommandLineRunner {
 
                 Talk talk = new Talk();
                 talk.setId(ctalk.id());
-                talk.setName(ctalk.getField("name"));
+                talk.setName(findSynonym(ctalk, String.class, "name", "title"));
                 talk.setDescription(Collections.singletonList(ctalk.getField("long")));
-                talk.setConferences(ctalk.getField("conference"));
+                talk.setConferences(findSynonymList(ctalk, String.class, "conferences", "conference"));
+
                 talk.setUrl(String.format("%s/%s", pUrl, ctalk.id().toLowerCase()));
 
-                String timeString = ctalk.getField("trackTime");
+                String timeString = findSynonym(ctalk, String.class, "trackTime", "talkTime");
                 talk.setTimeString(timeString);
                 talk.setTime(parseDateTime(timeString));
 
-
-                Double talkDay = ctalk.getField("talkDay");
-                if (null != talkDay) {
-                    talk.setTalkDay(talkDay.intValue());
-                } else {
-                    System.out.println(String.format("Talk without a day: %s", debugTalk(talk)));
-                }
+                Double talkDay = findSynonym(ctalk, Double.class, "talkDay", "trackDay", "day");
+                talk.setTalkDay(talkDay.intValue());
 
                 talk.setSpeakers(new ArrayList<>());
                 ArrayList<CDAEntry> speakers = ctalk.getField("speakers");

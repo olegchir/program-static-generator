@@ -1,13 +1,21 @@
 package com.olegchir.jug.site.parser.jbreak2018parser;
 
+
 import java.util.ArrayList;
 import java.util.List;
+
+import static com.olegchir.jug.site.parser.jbreak2018parser.LangUtil.escapeHtml;
 
 public class Speaker {
     private String speaker;
     private String company;
     private List<String> bio = new ArrayList<>();
     private String imageUrl;
+
+    public void htmlEscape() {
+        this.speaker = escapeHtml(this.speaker);
+        this.company = escapeHtml(this.company);
+    }
 
     public String getSpeaker() {
         return speaker;
